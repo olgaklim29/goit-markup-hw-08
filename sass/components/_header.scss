@@ -1,0 +1,19 @@
+.header {
+    border-bottom: 1px solid var(--header-bottom-border);
+  
+       
+  
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__navigation {
+    display: flex;
+    margin-left: 93px;
+  }
+
+  &__list {
+    display: flex;
+  }
+}

@@ -1,0 +1,33 @@
+.features {
+    display: flex;
+    justify-content: space-between;
+    --grid-num: 4;
+ 
+  
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+    
+  &__thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--features-tumb-color);
+    height: 120px;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+  font-weight: 400;
+  color: var(--primery-text-color);
+  }
+
+  &__card &__text {
+  font-size: 14px;
+  line-height: 1.71;
+
+  margin-bottom: 0px;
+  }
+}

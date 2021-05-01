@@ -1,0 +1,52 @@
+/* Service */
+
+
+.filter {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    min-width: 611px;
+    margin-bottom: 50px;
+    
+
+  &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+  }
+
+  &__item {
+    margin-right: 8px;
+  }
+  
+  &__item:nth-child(5n) {
+    margin-right: 0px;
+  }
+  
+     
+  &__button {
+    border-style: none;
+    border: 0px solid #f5f4fa;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    color: var(--title-text-color);
+    background-color: #f5f4fa;
+    cursor: pointer;
+    padding: 6px 22px;
+    border-radius: 4px;
+  
+    box-shadow: var(--transparent-color);
+  
+    transition: color var(--animation), background-color var(--animation), box-shadow var(--animation);
+  }
+
+  &__button:hover,
+  &__button:focus {
+    color: var(--white-color);
+    background-color: var(--accent-text-color);
+    box-shadow: var(--button-shadow);
+  }
+}

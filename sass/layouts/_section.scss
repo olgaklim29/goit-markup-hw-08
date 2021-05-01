@@ -1,0 +1,25 @@
+ /* Section */
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+ 
+
+  &__title {
+    color: var(--title-text-color);
+  }
+    
+  &--padding-bottom {
+    padding-bottom: 0;
+  }
+
+  &__title {
+    margin-top: 0px;
+    margin-bottom: 50px;
+  
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+  }
+ }  

@@ -1,0 +1,73 @@
+.menu {
+    display: block;
+       
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--link-text-contacts);
+  
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+   
+  &__link {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: var(--link-text-menu);
+    
+}
+  
+    
+  &__link:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    bottom: -1px;
+    background-color: var(--transparent-color);
+  
+    transition: background-color var(--animation);
+  }
+  
+  &__link:hover::after,
+  &__link:focus::after {
+    background-color: var(--accent-text-color);
+  }
+  
+  &__link--current {
+    color: var(--accent-text-color);
+  
+    transition: color var(--animation);
+  }
+  
+  &__link--current:hover,
+  &__link--current:focus {
+  color: var(--bg-accent-col);
+}
+
+  &__link--current::after {
+  content: "";
+  background-color: var(--accent-text-color);
+  bottom: -1px;
+}
+
+  &__link--current:hover::after,
+  &__link--current:focus::after {
+  color: var(--bg-accent-col);
+}
+
+  
+  
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-text-color);
+  }
+
+}  
