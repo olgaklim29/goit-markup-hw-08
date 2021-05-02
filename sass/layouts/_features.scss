@@ -1,13 +1,20 @@
 .features {
-    display: flex;
-    justify-content: space-between;
-    --grid-num: 4;
- 
-  
+      
   &__item {
-    display: flex;
-    flex-direction: column;
-  }
+    
+      --grid-num: 1;
+  
+      @media screen and (min-width: 768px) {
+        --grid-num: 2;
+      }
+      @media screen and (min-width: 1200px) {
+        --grid-num: 4;
+      }
+  
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   
     
   &__thumb {

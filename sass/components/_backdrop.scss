@@ -5,16 +5,19 @@
     width: 100%;
     height: 100%;
     background-color: var(--backdrop-bg-color);
-  
+    z-index: 500;
     opacity: 1;
     transition: opacity var(--animation);
+    
+    overflow-y: scroll;
   }
   
   .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
+
+    visibility: hidden;
   
-    transition: scale(0.9);
   }
   
   
@@ -38,10 +41,10 @@
     border-radius: 4px;
   
     transform-origin: top left;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
     transition: transform var(--animation);
   }
   
   .backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.9);
   }

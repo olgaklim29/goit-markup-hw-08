@@ -1,33 +1,41 @@
 .menu {
-    display: block;
-       
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--link-text-contacts);
-  
-
-  &__item:not(:last-child) {
-    margin-right: 50px;
+  @media screen and (max-width: 767.98px) {
+    display: none;
   }
+  @media screen and (min-width: 767.98px) {
+    display: flex;
+
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
 
    
-  &__link {
+.menu__link {
     position: relative;
     display: block;
+    letter-spacing: 0.02em;
+  
+    color: var(--link-text-menu);
+    transition: color var(--animation);
+
+  @media screen and (min-width: 767.98px) {
     padding-top: 32px;
     padding-bottom: 32px;
-    color: var(--link-text-menu);
-    
-}
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-text-color);
+  }
   
     
-  &__link:after {
+  &:after {
     content: "";
     position: absolute;
     display: block;
-    height: 4px;
+    height: 3px;
     width: 100%;
     border-radius: 2px;
     bottom: -1px;
@@ -36,38 +44,25 @@
     transition: background-color var(--animation);
   }
   
-  &__link:hover::after,
-  &__link:focus::after {
+  &:hover::after,
+  &:focus::after {
     background-color: var(--accent-text-color);
   }
+} 
   
-  &__link--current {
+.menu__link--current {
     color: var(--accent-text-color);
   
     transition: color var(--animation);
+  
+  
+  &::after {
+    background-color: var(--accent-text-color);
   }
-  
-  &__link--current:hover,
-  &__link--current:focus {
-  color: var(--bg-accent-col);
-}
-
-  &__link--current::after {
-  content: "";
-  background-color: var(--accent-text-color);
-  bottom: -1px;
-}
-
-  &__link--current:hover::after,
-  &__link--current:focus::after {
-  color: var(--bg-accent-col);
-}
-
-  
-  
-  &__link:hover,
-  &__link:focus {
-    color: var(--accent-text-color);
+  &:hover,
+  &:focus,
+  &:hover::after,
+  &:focus::after {
+    color: var(--background-color);
   }
-
-}  
+}

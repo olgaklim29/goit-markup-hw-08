@@ -17,6 +17,10 @@ body {
 
     margin: 0;
   }
+
+  body.modal-open {
+    overflow: hidden;
+  }
   
   h1,
   h2,

@@ -8,6 +8,7 @@
       rel="stylesheet" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.2.0/modern-normalize.min.css" />
       <link rel="stylesheet" href="./css/styles.min.css" />
+      <link rel="stylesheet" href="./js/modal.js" />
       <link rel="stylesheet" href="./js/modal.js" />  
     <title>Web Studio</title>
   </head>
@@ -47,6 +48,15 @@
           </svg>
           +38 096 111 11 11</a></li>
       </ul>
+
+      <button type="button" class="mobile-menu-btn" data-menu-button>
+        <svg class="mobile-menu__icon">
+          <use class="icon-menu" href="./images/icons/sprite.svg#icon-menu"></use>
+          <use
+            class="icon-close"
+            href="./images/icons/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
     </div>
     </header>
 
@@ -122,34 +132,66 @@
 
       <!--Наши услуги-->
 
-      <section class="section ">
+      <section class="section deckstop-section">
         <div class="container">
         <h2 class="section__title">Чем мы занимаемся</h2>
         <ul class="grid list types-services">
           <li class="grid__item types-services__item">
             <div class="types-services__thumb">
-            <img
-              src="./images/images1/img.jpg"
-              alt="Десктопные  приложения"
-              width="370"/>
+              <picture>
+                <source
+                  srcset="./images/work/desktop/img1-desktop-min.jpg 1x,
+                  ./images/work/desktop/img1-desktop@2x-min.jpg 2x"
+                 
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/work/desktop/img1-desktop-min.jpg"
+                  width="370"
+                  alt="Десктопные приложения"
+                />
+              </picture>
               <span class="types-services__title">Десктопные приложения</span>
               </div>
           </li>
           <li class="grid__item types-services__item">
             <div class="types-services__thumb">
-            <img
-              src="./images/images1/img-1.jpg"
-              alt="Мобильные приложения"
-              width="370"/>
+              <picture>
+                <source
+                  srcset="
+                  ./images/work/desktop/img2-desktop-min.jpg  1x,
+                  ./images/work/desktop/img2-desktop@2x-min.jpg  2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/work/desktop/img2-desktop-min.jpg"
+                  width="370"
+                  alt="Мобильные приложения"
+                />
+              </picture>
               <span class="types-services__title">Мобильные приложения</span>
               </div>
           </li>
           <li class="grid__item types-services__item">
             <div class="types-services__thumb">
-            <img
-              src="./images/images1/img-2.jpg"
-              alt="Дизайнерские решения"
-              width="370"/>
+              <picture>
+                <source
+                  srcset="
+                  ./images/work/desktop/img3-desktop-min.jpg  1x,
+                  ./images/work/desktop/img3-desktop@2x-min.jpg  2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/work/desktop/img3-desktop-min.jpg"
+                  width="370"
+                  alt="Дизайнерские решения"
+                />
+              </picture>
               <span class="types-services__title">Дизайнерские решения</span>
             </div>
           </li>
@@ -534,8 +576,63 @@
 </div>
 </div>
 
+<div class="mobile-menu" data-menu>
+  <div class="mobile__content">
+    <ul class="list mobile-menu__list">
+      <li class="mobile-menu__item">
+        <a
+          class="link mobile-menu__link mobile-menu__link--current"
+          href="#"
+          >Студия</a
+        >
+      </li>
+      <li class="mobile-menu__item">
+        <a class="link mobile-menu__link" href="./portfolio.html"
+          >Портфолио</a
+        >
+      </li>
+      <li class="mobile-menu__item">
+        <a class="link mobile-menu__link" href="#">Контакты</a>
+      </li>
+    </ul>
+    <div>
+      <ul class="list mobile-contact">
+        <li class="mobile-contact__item">
+          <a
+            class="link mobile-contact__link mobile-contact__link--accent"
+            href="tel:+380961111111"
+          >
+            +38 096 111 11 11
+          </a>
+        </li>
+        <li class="mobile-contact__item">
+          <a
+            class="link mobile-contact__link"
+            href="mailto:info@devstudio.com"
+          >
+            info@devstudio.com
+          </a>
+        </li>
+      </ul>
+      <ul class="mobile-social list">
+        <li class="mobile-social__item">
+          <a href="#" class="link mobile-social__link">Instagram</a>
+        </li>
+        <li class="mobile-social__item">
+          <a href="#" class="link mobile-social__link">Twitter</a>
+        </li>
+        <li class="mobile-social__item">
+          <a href="#" class="link mobile-social__link">Facebook</a>
+        </li>
+        <li class="mobile-social__item">
+          <a href="#" class="link mobile-social__link">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-  <script src="./js/modal.js"></script>
-  
- </body>
+<script src="./js/menu.js"></script>
+<script src="./js/modal.js"></script>
+</body>
 </html>

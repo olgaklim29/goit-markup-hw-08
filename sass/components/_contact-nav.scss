@@ -1,44 +1,60 @@
 .contact-nav {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    
+  @media screen and (max-width: 767.98px) {
+    display: none;
+  }
+  @media screen and (min-width: 767.98px) {
     display: flex;
+    flex-direction: column;
     margin-left: auto;
-  
+  }
+  @media screen and (min-width: 1199.98px) {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 767.98px) and (max-width: 1199.98px) {
+  .contact-nav__item:first-child {
+    margin-bottom: 10px;
+  }
+}
 
+@media screen and (min-width: 1199.98px) {
+  .contact-nav__item + .contact-nav__item {
+    margin-left: 50px;
+  }
+}
     
-    &__link {
+.contact-nav__link {
     display: flex;
     align-items: center;
+
+    letter-spacing: 0.02em;
+    color: var(--primery-text-color);
+
+    transition: color var(--animation);
+    @media screen and (min-width: 1199.98px) {
     padding-top: 32px;
     padding-bottom: 32px;
     
   }
   
-  &__link:hover,
-  &__link:focus{
+  &:hover,
+  &:focus{
     color: var(--accent-text-color);
     transition: color var(--animation);
   }
   
-  &__item + &__item {
-    margin-left: 50px;
-  }
-
+}    
   
-  
-  &__icon {
+.contact-nav__icon {
    
     margin-right: 10px;
     fill: currentColor;
     transition: fill var(--animation);
   
-  }   
+   
   
-  &__link:hover  &,
-  &__link:focus  & {
+    .contact-nav__link:hover &,
+    .contact-nav__link:focus & {
     fill: var(--accent-text-color);
   }
   
