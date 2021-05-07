@@ -1,6 +1,8 @@
 .social  {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    min-width: 206px;
   
   
   &__item {
@@ -22,7 +24,7 @@
   
     background: var(--white-color);
     border-radius: 50%;
-    fill: var(--base-icon-color);
+    
 
     transition: background-color var(--animation);
 }
@@ -31,6 +33,7 @@
    width: 20px;
    height: 20px;
    
+   fill: var(--base-icon-color);
    transition: var(--animation);
   
   }

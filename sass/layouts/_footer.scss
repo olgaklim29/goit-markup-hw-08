@@ -4,21 +4,31 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    
     background-color: var(--background-color);
     
   
 
   &__link {
-    display: inline-block;
+    justify-content: center;
+    font-weight: 400;
     letter-spacing: 0.03em;
+    line-height: 1.71;
+    padding: 0;
     color: var(--footer-link-col);
-    margin-bottom: 9px;
+    
+    @media screen and (min-width: 1198.98px) {
+      justify-content: start;
+    }
   }
   
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+    @media screen and (min-width: 1198.98px) {
+      margin-bottom: 9px;
+    }
+  }
   
 
   &__link:hover,
@@ -29,38 +39,70 @@
   
   &__container {
     
-    display: flex;
-    justify-content: space-between;
-    
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    @media screen and (min-width: 1200px) {
+      justify-content: left;
+    }
   }
 
     
   &__address {
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-   
+    text-align: center;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+      margin-right: 70px;
+    }
   }
   
   &__social {
     display: flex;
     flex-direction: column;
     
-    margin-top: 12px;
-    margin-bottom: 20px;
-  }
-  
+    align-items: center;
 
-  &__social &__title {
-    margin-bottom: 20px;
-  
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-    
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
   }
+
+  @media screen and (min-width: 1200px) {
+    align-items: flex-start;
+    margin-top: 12px;
+  }
+}
   
+&__contact-link {
+  justify-content: center;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.71;
+  padding: 0;
+  color: var(--address--link-col);
+  @media screen and (min-width: 1198.98px) {
+    justify-content: start;
+  }
+
+  &:first-child {
+    color: var(--white-color);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+    @media screen and (min-width: 1198.98px) {
+      margin-bottom: 9px;
+    }
+  }
+}
+   
+    
   &__title {
     color: var(--white-color);
 
@@ -86,27 +128,32 @@
  
  }
    &__contact {
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: #ffffff;
+    text-align: center;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+      margin-right: 70px;
+    }
   }
   
         
   &__title {
     margin-bottom: 20px;
-  }
+
+    @media screen and (max-width: 1198.98px) {
+      
+        text-align: center;
+      }
+    }
+  
 
 }
 
-  .footer-social__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 206px;
-  }
+  
   
   .footer-social__item, 
     .social__link--bg {
@@ -138,15 +185,33 @@
     background: var(--accent-text-color);
   }
 
-  
+   
 
- .footer-form {
-  color: var(--white-color);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  line-height: 1.14;
-  font-style: normal;
+.footer__email-form {
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 60px;
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 12px;
+    text-align: left;
+    margin-left: auto;
+    width: 50%;
+  }
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 1199.98px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .email__input {
@@ -160,14 +225,19 @@
   outline-color: rgba(255, 255, 255, 0.3);
   border-radius: 4px;
 
-  width: 358px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
+  max-width: 450px;
+  width: 100%;
 
+  font-size: 16px;
+  line-height: 1.25;
+
+ 
   transition: border-color var(--animation), outline-color var(--animation);
 
+  @media screen and (min-width: 1199.98px) {
+    width: 358px;
+    margin-right: 12px;
+  }
 
   &:hover,
   &:focus {
@@ -183,11 +253,16 @@
  
   
 .street__link {
-    display: inline-block;
-    
-    color: var(--white-color);
-    text-decoration: none;
-    margin-bottom: 9px;
+  justify-content: center;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.71;
+  padding: 0;
+  color: var(--white-color);
+  text-decoration: none;
+  @media screen and (min-width: 1198.98px) {
+    justify-content: start;
+  }
   
   
     &:hover,

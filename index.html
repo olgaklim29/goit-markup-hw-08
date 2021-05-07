@@ -8,7 +8,7 @@
       rel="stylesheet" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.2.0/modern-normalize.min.css" />
       <link rel="stylesheet" href="./css/styles.min.css" />
-      <link rel="stylesheet" href="./js/modal.js" />
+      <link rel="stylesheet" href="./js/menu.js" />
       <link rel="stylesheet" href="./js/modal.js" />  
     <title>Web Studio</title>
   </head>
@@ -206,10 +206,39 @@
         <h2 class="section__title">Наша команда</h2>
         <ul class="grid list team">
           <li class="grid__item team__item">
-            <img
-              src="./images/images2/img.jpg"
-              alt="Парень в коричневой рубашке"
-              width="270"/>
+            <picture class="team__img">
+              <source
+                srcset="
+                  ./images/team/desktop/img1-desktop-min.jpg 1x,
+                  ./images/team/desktop/img1-desktop@2x-min.jpg 2x
+                "
+                media="(min-width: 1200px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="
+                  ./images/team/tablet/img1-tablet-min.jpg    1x,
+                  ./images/team/tablet/img1-tablet@2x-min.jpg 2x
+                "
+                media="(min-width: 768px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="
+                  ./images/team/mobile/img1-mobile-min.jpg    1x,
+                  ./images/team/mobile/img1-mobile@2x-min.jpg 2x
+                "
+                media="(max-width: 767px)"
+                type="image/jpeg"
+              />
+             
+              <img
+                src="./images/team/desktop/img1-desktop-min.jpg"
+                width="450"
+                alt="На
+              фотографии Игорь Демьяненко"
+              />
+            </picture>
               <div class="team__card">
             <h3 class="team__name">Игорь Демьяненко</h3>
             <p class="team__position">Product Designer</p>
@@ -248,10 +277,39 @@
           </div>
           </li>
           <li class="grid__item team__item">
-            <img
-              src="./images/images2/img-1.jpg"
-              alt="Девушка в черном пиджаке"
-              width="270"/>
+            <picture class="team__img">
+              <source
+                srcset="
+                  ./images/team/desktop/img2-desktop-min.jpg    1x,
+                  ./images/team/desktop/img2-desktop@2x-min.jpg 2x
+                "
+                media="(min-width: 1200px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="
+                  ./images/team/tablet/img2-tablet-min.jpg    1x,
+                  ./images/team/tablet/img2-tablet@2x-min.jpg 2x
+                "
+                media="(min-width: 768px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="
+                  ./images/team/mobile/img2-mobile-min.jpg    1x,
+                  ./images/team/mobile/img2-mobile@2x-min.jpg 2x
+                "
+                media="(max-width: 767px)"
+                type="image/jpeg"
+              />
+            
+              <img
+                src="./images/team/desktop/img2-desktop-min.jpg"
+                width="450"
+                alt="На фотографии Ольга Репина"
+              />
+            </picture>
+
               <div class="team__card">
             <h3 class="team__name">Ольга Репина</h3>
             <p class="team__position">Frontend Developer</p>
@@ -290,10 +348,38 @@
           </div>
           </li>
           <li class="grid__item team__item">
-            <img
-              src="./images/images2/img-2.jpg"
-              alt="Парень в белой рубашке"
-              width="270"/>
+            <picture class="team__img">
+              <source
+                srcset="
+                  ./images/team/desktop/img3-desktop-min.jpg    1x,
+                  ./images/team/desktop/img3-desktop@2x-min.jpg 2x
+                "
+                media="(min-width: 1200px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="
+                  ./images/team/tablet/img3-tablet-min.jpg    1x,
+                  ./images/team/tablet/img3-tablet@2x-min.jpg 2x
+                "
+                media="(min-width: 768px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="
+                  ./images/team/mobile/img3-mobile-min.jpg    1x,
+                  ./images/team/mobile/img3-mobile@2x-min.jpg 2x
+                "
+                media="(max-width: 767px)"
+                type="image/jpeg"
+              />
+             
+              <img
+                src="./images/team/desktop/img3-desktop-min.jpg"
+                width="450"
+                alt="На фотографии Николай Тарасов"
+              />
+            </picture>
               <div class="team__card">
             <h3 class="team__name">Николай Тарасов</h3>
             <p class="team__position">Marketing</p>
@@ -332,10 +418,39 @@
           </div>
           </li>
           <li class="grid__item team__item">
-            <img
-              src="./images/images2/img-3.jpg"
-              alt="Парень в черной футболке"
-              width="270"/>
+            <picture class="team__img">
+              <source
+                srcset="
+                  ./images/team/desktop/img4-desktop-min.jpg    1x,
+                  ./images/team/desktop/img4-desktop@2x-min.jpg 2x
+                "
+                media="(min-width: 1200px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="
+                  ./images/team/tablet/img4-tablet-min.jpg    1x,
+                  ./images/team/tablet/img4-tablet@2x-min.jpg 2x
+                "
+                media="(min-width: 768px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="
+                  ./images/team/mobile/img4-mobile-min.jpg    1x,
+                  ./images/team/mobile/img4-mobile@2x-min.jpg 2x
+                "
+                media="(max-width: 767px)"
+                type="image/jpeg"
+              />
+              
+              <img
+                src="./images/team/desktop/img4-desktop-min.jpg"
+                width="450"
+                alt="На фотографии Михаил Ермаков"
+              />
+            </picture>
+
               <div class="team__card">
             <h3 class="team__name">Михаил Ермаков</h3>
             <p class="team__position">UI Designer</p>
@@ -434,22 +549,21 @@
 
     <footer class="footer">
       <div class="container footer__container">
-        <div class="footer__item">
+        <div class="footer__address">
       <a class="logo logo__footer" href="./index.html">
         <span class="logo--accent-color">Web</span>Studio</a>
           
         <address class="address">
-        <ul class="list footer__contact">
-          <li>
-            <a class="street__link link" href="https://goo.gl/maps/qucAcmc7RsmT4kep8" rel="nofollow noopener noreferrer" target="blanc">г. Киев, пр-т Леси Украинки, 26 </a>
-          </li>
-          <li>
-            <a class="link footer__link" href="mailto:info@example.com" >info@devstudio.com</a>
-          </li>
-          <li>
-            <a class="link footer__link" href="tel:+380961111111" >+38 099 111 11 11</a>
-          </li>
-        </ul>
+        
+            <a class="link contact-nav__link footer__contact-link" href="https://goo.gl/maps/qucAcmc7RsmT4kep8" rel="nofollow noopener noreferrer" target="blanc">г. Киев, пр-т Леси Украинки, 26 </a>
+       
+      
+            <a class="link contact-nav__link footer__contact-link" href="mailto:info@example.com" >info@devstudio.com</a>
+         
+        
+            <a class="link contact-nav__link footer__contact-link" href="tel:+380961111111" >+38 099 111 11 11</a>
+          
+       
       </address>
      </div>
      <div class="footer__item footer__social">
@@ -485,7 +599,7 @@
         </li>
        </ul>
       </div>
-      <div class="footer__item">
+      <div class="footer__email-form">
         <h3 class="title footer__title">Подпишитесь на рассылку</h3>
 
         <form class="footer-form" autocomplete="on" novalidate>

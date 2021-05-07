@@ -6,30 +6,33 @@
   line-height: 1.19;
   text-align: center;
   
-  --grid-num: 4;
   
-
   &__item {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     
     box-shadow: var(--box-shadow);
     border-radius: 0px 0px 4px 4px;
     background-color: var(--white-color);
   }
   
-  &__item:nth-child(4n) {
-    margin-right: 0px;
-  }
+    --grid-num: 1;
+
+    @media screen and (min-width: 768px) {
+      --grid-num: 2;
+    }
+    @media screen and (min-width: 1200px) {
+      --grid-num: 4;
+    }
   
     
   &__name {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.18;
-    letter-spacing: 0.03em;
-    
     margin-bottom: 10px;
-    font-size: inherit;
     font-weight: 500;
+    font-size: inherit;
     
     color: var(--title-text-color);
   }
