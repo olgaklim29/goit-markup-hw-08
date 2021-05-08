@@ -9,7 +9,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 446px;
+    min-width: 370px;
+
+    width: 100%;
+    @media screen and (min-width: 320px) and (max-width: 479.98px) {
+      min-width: 240px;
+    }
+  
+    @media screen and (min-width: 479.98px) {
+      max-width: 450px;
+    }
+  
+    @media screen and (min-width: 1199.98px) {
+      min-width: 448px;
+    }
   }
   
   &__label,
@@ -140,23 +153,33 @@
   /*---checkbox--*/
   
   .checkbox {
-    text-align: center;
+    
     margin-top: 20px;
     margin-bottom: 30px;
   
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.14;
   
-    letter-spacing: 0.03em;
+    
   
     color: var(--primery-text-color);
+
+    @media screen and (min-width: 320px) and (max-width: 479.98px) {
+      text-align: center;
+    }
+  
+    @media screen and (min-width: 1199.98px) {
+      text-align: center;
+      font-size: 14px;
+    }
+  
   
   
   &__label {
     position: relative;
-    display: inline-block;
+    
     cursor: pointer;
     padding-left: calc(7px + 16px);
   }
@@ -203,18 +226,21 @@
   }
   
   &__link {
-    display: inline-block;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 1.71;
-  
-    letter-spacing: 0.03em;
-    margin-left: 2px;
+   
     color: var(--accent-text-color);
     text-decoration: underline;
     transition: color var(--animation);
-  }
+    
+    @media screen and (min-width: 320px) and (max-width: 479.98px) {
+      display: block;
+    }
   
+    @media screen and (min-width: 1199.98px) {
+      display: inline-block;
+      margin-left: 2px;
+    }
+  }
+
   &__link:hover,
   &__link:focus {
     color: var(--bg-accent-col);

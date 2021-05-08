@@ -2,30 +2,43 @@
 
 
 .filter {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    min-width: 611px;
-    margin-bottom: 50px;
-    
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 
-  &__list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      
+  @media screen and (min-width: 767.98px) {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    min-width: 611px;
+  }
+  @media screen and (min-width: 1199.98px) {
+    margin-bottom: 50px;
   }
 
   &__item {
     margin-right: 8px;
+
+    @media screen and (min-width: 320px) and (max-width: 390px) {
+      &:nth-last-child(-n + 3) {
+        margin-top: 15px;
+      }
+    }
+
+    @media screen and (max-width: 767.98px) {
+      &:nth-last-child(-n + 2) {
+        margin-top: 15px;
+      }
+    }
   }
-  
+
   &__item:nth-child(5n) {
     margin-right: 0px;
   }
-  
+}
      
-  &__button {
+.filter__button {
     border-style: none;
     border: 0px solid #f5f4fa;
     font-family: inherit;
@@ -41,10 +54,10 @@
     box-shadow: var(--transparent-color);
   
     transition: color var(--animation), background-color var(--animation), box-shadow var(--animation);
-  }
+  
 
-  &__button:hover,
-  &__button:focus {
+  &:hover,
+  &:focus {
     color: var(--white-color);
     background-color: var(--accent-text-color);
     box-shadow: var(--button-shadow);

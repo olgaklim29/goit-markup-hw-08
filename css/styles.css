@@ -105,6 +105,7 @@ address {
 }
 
 .container {
+  width: 100vw;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -269,6 +270,10 @@ address {
   transition: background-color var(--animation);
 }
 
+.social__link:hover, .social__link:focus {
+  background: var(--accent-text-color);
+}
+
 .social__icon {
   width: 20px;
   height: 20px;
@@ -276,8 +281,8 @@ address {
   transition: var(--animation);
 }
 
-.social__link:hover, .social__link:focus {
-  background: var(--accent-text-color);
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
   fill: var(--white-color);
 }
 
@@ -668,7 +673,26 @@ address {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 446px;
+  min-width: 370px;
+  width: 100%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 479.98px) {
+  .modal-form__container {
+    min-width: 240px;
+  }
+}
+
+@media screen and (min-width: 479.98px) {
+  .modal-form__container {
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 1199.98px) {
+  .modal-form__container {
+    min-width: 448px;
+  }
 }
 
 .modal-form__label, .modal-form__element {
@@ -781,20 +805,30 @@ address {
 
 /*---checkbox--*/
 .checkbox {
-  text-align: center;
   margin-top: 20px;
   margin-bottom: 30px;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  font-size: 12px;
+  line-height: 1.14;
   color: var(--primery-text-color);
+}
+
+@media screen and (min-width: 320px) and (max-width: 479.98px) {
+  .checkbox {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1199.98px) {
+  .checkbox {
+    text-align: center;
+    font-size: 14px;
+  }
 }
 
 .checkbox__label {
   position: relative;
-  display: inline-block;
   cursor: pointer;
   padding-left: calc(7px + 16px);
 }
@@ -838,15 +872,22 @@ address {
 }
 
 .checkbox__link {
-  display: inline-block;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  margin-left: 2px;
   color: var(--accent-text-color);
   text-decoration: underline;
   transition: color var(--animation);
+}
+
+@media screen and (min-width: 320px) and (max-width: 479.98px) {
+  .checkbox__link {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1199.98px) {
+  .checkbox__link {
+    display: inline-block;
+    margin-left: 2px;
+  }
 }
 
 .checkbox__link:hover, .checkbox__link:focus {
@@ -899,7 +940,7 @@ address {
   text-align: center;
   background-color: var(--background-color);
   color: var(--white-color);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero/mobile/hero-mobile-480.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/mobile/hero-mobile-480.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -907,19 +948,19 @@ address {
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero/mobile/hero-mobile-480@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/mobile/hero-mobile-480@2x.jpg);
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero/tablet/hero-tablet-768.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/tablet/hero-tablet-768.jpg);
   }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero/tablet/hero-tablet768@2x-min.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/tablet/hero-tablet768@2x-min.jpg);
   }
 }
 
@@ -928,13 +969,13 @@ address {
     padding-top: 200px;
     padding-bottom: 200px;
     min-height: 600px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero/desktop/hero-desktop1600.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/desktop/hero-desktop1600.jpg);
   }
 }
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero/desktop/hero-desktop1600@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/desktop/hero-desktop1600@2x.jpg);
   }
 }
 
@@ -1098,13 +1139,13 @@ address {
 }
 
 @media screen and (min-width: 768px) {
-  .clients {
+  .clients__item {
     --grid-num: 3;
   }
 }
 
-@media screen and (min-width: 1198px) {
-  .clients {
+@media screen and (min-width: 1200px) {
+  .clients__item {
     --grid-num: 6;
   }
 }
@@ -1115,19 +1156,26 @@ address {
   align-items: center;
   width: 100%;
   height: 100%;
-  border: 1px solid #afb1b8;
   border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  color: #afb1b8;
   fill: #afb1b8;
   transition: border-color var(--animation), fill var(--animation);
 }
 
 .clients__link:hover, .clients__link:focus {
-  border: 1px solid var(--accent-text-color);
+  border-color: var(--accent-text-color);
   fill: var(--accent-text-color);
 }
 
 .clients__icon {
   transition: fill var(--animation);
+}
+
+.clients__link:hover .clients__icon,
+.clients__link:focus .clients__icon {
+  fill: var(--accent-text-color);
 }
 
 /*--Футер*/
@@ -1410,20 +1458,40 @@ address {
 /* Service */
 .filter {
   display: flex;
-  justify-content: center;
-  margin: auto;
-  min-width: 611px;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
-.filter__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+@media screen and (min-width: 767.98px) {
+  .filter {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    min-width: 611px;
+  }
+}
+
+@media screen and (min-width: 1199.98px) {
+  .filter {
+    margin-bottom: 50px;
+  }
 }
 
 .filter__item {
   margin-right: 8px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 390px) {
+  .filter__item:nth-last-child(-n + 3) {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .filter__item:nth-last-child(-n + 2) {
+    margin-top: 15px;
+  }
 }
 
 .filter__item:nth-child(5n) {
@@ -1452,8 +1520,26 @@ address {
   box-shadow: var(--button-shadow);
 }
 
-.product {
-  content: "";
+.gallery__item {
+  --grid-num: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery__item {
+    --grid-num: 2;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery__item {
+    --grid-num: 3;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .gallery__item:first-child .product__meta {
+    min-height: 146px;
+  }
 }
 
 .product__link {
@@ -1510,7 +1596,7 @@ address {
   color: var(--white-color);
   background-color: var(--card-bg-overlay-color);
   transform: translateY(103%);
-  transition: transform var(--animation);
+  transition: var(--animation);
 }
 
 .product__link:hover .product__overlay,
