@@ -18,6 +18,7 @@
   --accent-text-color: #2196f3;
   --base-icon-color: #afb1b8;
   --title-font: "Roboto", sans-serif;
+  --grey-color: #f5f4fa;
   --white-color: #ffffff;
   --bg-accent-col: #188ce8;
   --footer-link-col:#acacb0;
@@ -337,13 +338,18 @@ address {
 }
 
 .title {
+  text-align: center;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  margin-bottom: 10px;
   text-transform: uppercase;
   color: var(--title-text-color);
+}
+
+@media screen and (min-width: 767.98px) {
+  .title {
+    text-align: left;
+  }
 }
 
 .header {
@@ -359,6 +365,7 @@ address {
 @media screen and (min-width: 320px) and (max-width: 767.98px) {
   .header {
     padding: 10px 0;
+    justify-content: space-between;
   }
 }
 
@@ -911,25 +918,46 @@ address {
 
 /* Section */
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.section__title {
-  color: var(--title-text-color);
+@media screen and (min-width: 1199.98px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.section--bg {
+  background-color: var(--grey-color);
 }
 
 .section--padding-bottom {
-  padding-bottom: 0;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1199.98px) {
+  .section--padding-bottom {
+    padding-bottom: 0;
+  }
 }
 
 .section__title {
   margin-top: 0px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
+  color: var(--title-text-color);
+}
+
+@media screen and (min-width: 1199.98px) {
+  .section__title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 /* Герой */
@@ -1038,7 +1066,7 @@ address {
 .features__card .features__text {
   font-size: 14px;
   line-height: 1.71;
-  margin-bottom: 0px;
+  margin-bottom: 30px;
 }
 
 .deckstop-section {
@@ -1295,6 +1323,13 @@ address {
 
 .footer__title {
   color: var(--white-color);
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1198.98px) {
+  .footer__title {
+    text-align: center;
+  }
 }
 
 .footer__item {

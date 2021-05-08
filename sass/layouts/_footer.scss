@@ -105,8 +105,14 @@
     
   &__title {
     color: var(--white-color);
+    margin-bottom: 20px;
 
+    @media screen and (max-width: 1198.98px) {
+      text-align: center;
+    }
   }
+
+  
   
   &__item {
   display: flex;
