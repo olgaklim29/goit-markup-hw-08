@@ -1228,16 +1228,6 @@ address {
   }
 }
 
-.footer:not(:last-child) {
-  margin-bottom: 8px;
-}
-
-@media screen and (min-width: 1198.98px) {
-  .footer:not(:last-child) {
-    margin-bottom: 9px;
-  }
-}
-
 .footer__link:hover, .footer__link:focus {
   color: var(--accent-text-color);
 }
@@ -1298,7 +1288,7 @@ address {
   letter-spacing: 0.03em;
   line-height: 1.71;
   padding: 0;
-  color: var(--address--link-col);
+  color: var(--footer-link-col);
 }
 
 @media screen and (min-width: 1198.98px) {

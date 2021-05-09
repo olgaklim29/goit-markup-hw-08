@@ -23,13 +23,7 @@
   }
   
 
-  &:not(:last-child) {
-    margin-bottom: 8px;
-    @media screen and (min-width: 1198.98px) {
-      margin-bottom: 9px;
-    }
-  }
-  
+    
 
   &__link:hover,
   &__link:focus {
@@ -85,7 +79,7 @@
   letter-spacing: 0.03em;
   line-height: 1.71;
   padding: 0;
-  color: var(--address--link-col);
+  color: var(--footer-link-col);
   @media screen and (min-width: 1198.98px) {
     justify-content: start;
   }
